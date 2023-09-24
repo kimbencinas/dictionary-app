@@ -7,13 +7,19 @@ export default function Search({ onSearch }) {
         onSearch(inputWord);
     };
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    };
+
     return (
         <div className="search-bar">
             <input
                 type="text"
-                onChange={(e) => {
-                    setInputWord(e.target.value);
-                }}
+                value={inputWord}
+                onChange={(e) => setInputWord(e.target.value)}
+                onKeyPress={handleKeyPress}
             />
             <button onClick={handleSearch}>Search</button>
         </div>
