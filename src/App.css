@@ -6,7 +6,9 @@
 
 .navbar {
     display: flex;
-    margin-top: -125px;
+    margin-top: -135px;
+    justify-content: center;
+    align-items: center;
     height: 80px;
     width: 100%;
     position: fixed;
